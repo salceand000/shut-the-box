@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shut the Box</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <h1>Welcome to the Shut the box game.</h1>
+
+  </head>
+  <body>
+      <div class="game-container">
+      <div class="player">
+         <input type="text" id="player1" placeholder="Player1"/>
+         <input type="text" id="player2" placeholder="Player2"/>
+      <button id="start">start game</button>
+    </div>
+
+    <div class="game-board" style="display: none;">
+      <div class="dice">
+        <i id="die1" class="bi bi-dice-1"></i>
+        <i id="die2" class="bi bi-dice-1"></i>
+      </div>
+      <div class="boxes">
+          <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+            <div class="box" id="box4">4</div>
+            <div class="box" id="box5">5</div>
+            <div class="box" id="box6">6</div>
+            <div class="box" id="box7">7</div>
+            <div class="box" id="box8">8</div>
+            <div class="box" id="box9">9</div>
+          <div class="box" id="box10">10</div>
+      </div>
+
+      <div class="buttons">
+        <button id="roll">roll</button>
+        <button id="individual" disabled>individual</button>
+        <button id="sum" disabled>sum</button>
+        <button id="endTurn" disabled>endturn</button>
+      </div>
+
+      <div class="turn">
+        <h2 id="currentPlayer">Turn of: Player 1</h2>
+        <p id="round">round: 1</p>
+      </div>
+    </div>
+
+    <div class="winner" style="display: none;">
+      <h3 id="winnerMessage"></h3>
+      <button id="playAgain">play again</button>
+    </div>
+
+    <div class="scorecard">
+      <table>
+        <thead>
+          <tr>
+            <th>round</th>
+            <th>player 1</th>
+            <th>player 2</th>
+            </tr>
+          </thead>
+          <tbody id="scorecard"></tbody>
+        </table>
+      </div>
+      </div>
+
+      <script src="game.js"></script>
+    </body>
+  </html>
